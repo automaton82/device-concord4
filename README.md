@@ -63,7 +63,8 @@ https://graph-xx.api.smartthings.com/oauth/authorize?response_type=code&client_i
     * Set *rest_api_auth_password* to the password preference you set in step (12)
     * If you changed port in step (12), then ensure **port** matches
     * Set *callbackurl_base* to your base URL with the correct *graph-xx* URL
-    * Set *callbackurl_app_id* to the Client ID from your SmartApp from step (20)
+    * Set *callbackurl_app_id* to the installed SmartApp ID. This ID will be listed in the logs when setup, or alternatively you can find it by going to your devices in the IDE, finding your 'Alarm', and then clicking on the SmartApp listed at the bottom so you end up with a URL like this:
+    https://graph-na04-useast2.api.smartthings.com/installedSmartApp/show/<ID HERE>?deviceId=xxx-xxx-xxx
     * Set *callbackurl_access_token* to the token retrieved from step (22-23)
     * Set *callbackurl_concord_device_id* to the device ID noted from the URL in step (13)
  28.  Start the program using **python concordsvr.py**
