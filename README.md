@@ -42,7 +42,7 @@ This is a project for connecting the Concord 4 alarm system to SmartThings.  You
  20.  Write down the **Client ID** and **Client Secret**
  21.  Open a web browser window in private mode (incognito).  Navigate to this URL into your browser, substituting in the Client Id:
  
-https://graph-xx.api.smartthings.com/oauth/authorize?response_type=code&client_id=<Client Id>&scope=app&redirect_uri=http://localhost
+https://graph-xx.api.smartthings.com/oauth/authorize?response_type=code&client_id=<Client ID>&scope=app&redirect_uri=https%3A%2F%2Fgraph-xx.api.smartthings.com%2Foauth%2Fcallback
 
     If you are prompted to login to SmartThings, go ahead.
     Select you location from the drop down list and the receiver you want to have access to through the REST API
