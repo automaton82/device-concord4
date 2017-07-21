@@ -14,6 +14,7 @@ This is a project for connecting the Concord 4 alarm system to SmartThings.  You
  - Python 2.7
  - Python packages: requests, future, pyserial (pip install)
  - Raspberry Pi (recommended)
+ - Concord 4 "Keychain TP Arm" (0513) is set to ON, otherwise we cannot arm silently and directly to 'Away' mode
 
 ## Installation
 
