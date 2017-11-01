@@ -321,7 +321,7 @@ class ConcordSvr(object):
 
         # Send an e-mail if we're armed and we have a zone update
         # This would mean the alarm has detected something
-        if self.armed and 'zone_name' in eventInfo:
+        if self.armed and 'zone_name' in eventInfo and len(eventInfo['zone_state']) > 0:
             email_subject = "--- ALARM EVENT: ZONE " + eventInfo['zone_name']
             email_message = "NEW STATE: " + str(eventInfo['zone_state']) + "\nPREVIOUS STATE: " + str(eventInfo['prev_zone_state']) + "\nCOMMAND: " + str(eventInfo['command'] + "\nDATE: " + str(event_time))
             log.info("Sending Email... ")
@@ -345,6 +345,8 @@ class ConcordSvr(object):
         log.debug(str(item)+' | '+str(variable)+':'+str(state))
         if 'panel' in item:
             log.info('Panel Information: '+str(variable)+': '+str(state))
+        if 'touchpad' in item:
+            pass
         if 'zone' in item:
             pass
 
