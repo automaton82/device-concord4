@@ -219,7 +219,7 @@ def update_message_checksum(bin_msg):
 def encode_message_to_ascii(bin_msg):
     s = ''
     for b in bin_msg:
-        s += '%02x' % b
+        s += '%02X' % b
     return s
 
 def decode_message_from_ascii(ascii_msg):
